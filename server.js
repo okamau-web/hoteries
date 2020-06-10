@@ -7,6 +7,7 @@ const expressLayouts = require('express-ejs-layouts')
 
 const indexRouter = require('./routes/index')
 
+ const link = require('./p')
 app.set('view engine', 'ejs')
 app.set('views', __dirname + '/views')
 app.set('layout', 'layouts/layout')
@@ -16,7 +17,7 @@ app.use(express.static('public'))
 const mongoose = require('mongoose')
 
   
-mongoose.connect("mongodb+srv://hannah:hanna@eventsdb-kcpmt.mongodb.net/test?retryWrites=true&w=majority", {
+mongoose.connect( link, {
     useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true
   }) .then(() =>console.log('You are now connected to MongoDB!'))
   .catch(err => console.error('Something went wrong', err))
