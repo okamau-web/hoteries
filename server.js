@@ -16,7 +16,7 @@ app.use(express.static('public'))
 const mongoose = require('mongoose')
 
   
-mongoose.connect('mongodb://localhost/hoteliers', {
+mongoose.connect("mongodb+srv://hannah:hanna@eventsdb-kcpmt.mongodb.net/test?retryWrites=true&w=majority", {
     useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true
   }) .then(() =>console.log('You are now connected to MongoDB!'))
   .catch(err => console.error('Something went wrong', err))
