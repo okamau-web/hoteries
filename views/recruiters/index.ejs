@@ -1,1 +1,11 @@
-all employers
+<h2>Search Employers</h2>
+<form action="/recruiters" method="GET">
+<label>Name</label>
+<input type="text" name="name" value="<%= searchOptions.name %>"> 
+<button type="submit">Search</button>
+</form>
+<br>
+<% recruiters.forEach(recruiter => { %> 
+<div><%= recruiter.name %></div>
+
+<% }) %> 
